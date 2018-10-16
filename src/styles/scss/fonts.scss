@@ -1,0 +1,35 @@
+body {
+  font: {
+    family: 'futura-pt', sans-serif;
+    weight: 400;
+    style: normal;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font: {
+    family: 'futura-pt', sans-serif;
+    weight: 400;
+    style: normal;
+  }
+  letter-spacing: .07em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.script {
+  font: {
+    family: 'braisetto', script;
+    weight: 400;
+    style: normal;
+  }
+  letter-spacing: normal;
+}
+
+.light {
+  font-weight: 300;
+}

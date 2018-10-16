@@ -1,0 +1,35 @@
+@import 'fonts';
+@import 'nav';
+@import 'landing';
+@import 'details';
+@import 'rsvp';
+@import 'story';
+
+$wine: #2E011B;
+
+.center-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.screen-width-img {
+  height: auto;
+  width: 100vw;
+}
+
+.hero-image {
+  
+  @media only screen and (max-width: 415px) {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.story-col {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  justify-content: flex-end;
+}

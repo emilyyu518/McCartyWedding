@@ -1,0 +1,22 @@
+.details-container {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.75em; }
+
+.details-names {
+  font-size: 32pt; }
+
+.details-date {
+  font-size: 20pt;
+  padding-top: .75em; }
+
+.details-location {
+  font-size: 24pt; }
+
+.details-etc {
+  font-size: 43pt;
+  padding-top: 3.5em; }
+
+/*# sourceMappingURL=details.css.map */

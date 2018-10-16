@@ -1,0 +1,17 @@
+.story-heading-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4em;
+}
+
+.story-heading {
+  font-size: 41pt;
+}
+
+.story-subheading {
+  color: $berry;
+  font-size: 33pt;
+  padding-top: .5em;
+  transform: rotate(-10deg);
+}
