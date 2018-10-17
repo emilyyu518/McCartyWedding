@@ -1,7 +1,19 @@
 {
-  "main.css": "static/css/main.46686c8e.css",
-  "main.css.map": "static/css/main.46686c8e.css.map",
-  "main.js": "static/js/main.534e6a83.js",
-  "main.js.map": "static/js/main.534e6a83.js.map",
-  "static/media/save-the-date.jpg": "static/media/save-the-date.b3e1aca0.jpg"
+  "main.css": "static/css/main.89885525.css",
+  "main.css.map": "static/css/main.89885525.css.map",
+  "main.js": "static/js/main.6b6ad3f6.js",
+  "main.js.map": "static/js/main.6b6ad3f6.js.map",
+  "static/media/details-desktop.jpg": "static/media/details-desktop.d7f09855.jpg",
+  "static/media/details-mobile.jpg": "static/media/details-mobile.16e36140.jpg",
+  "static/media/french-quarter-mobile.jpg": "static/media/french-quarter-mobile.7485d821.jpg",
+  "static/media/landing-desktop.jpg": "static/media/landing-desktop.ef83868d.jpg",
+  "static/media/landing-mobile.jpg": "static/media/landing-mobile.239fff46.jpg",
+  "static/media/rsvp-desktop.jpg": "static/media/rsvp-desktop.3094f82f.jpg",
+  "static/media/rsvp-mobile.jpg": "static/media/rsvp-mobile.95bc754f.jpg",
+  "static/media/story-bg-desktop.jpg": "static/media/story-bg-desktop.f0e47b8e.jpg",
+  "static/media/story-bg-mobile.jpg": "static/media/story-bg-mobile.b327c66e.jpg",
+  "static/media/story-desktop.jpg": "static/media/story-desktop.806c4052.jpg",
+  "static/media/story-mobile.jpg": "static/media/story-mobile.c5daf2a3.jpg",
+  "static/media/whiskers-left.svg": "static/media/whiskers-left.6653aa63.svg",
+  "static/media/whiskers-right.svg": "static/media/whiskers-right.4dd0612b.svg"
 }
