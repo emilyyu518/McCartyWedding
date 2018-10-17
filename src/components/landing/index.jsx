@@ -1,6 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import landingMobile from '../../assets/landing-mobile.jpg';
 import landingDesktop from '../../assets/landing-desktop.jpg';
+
+const blurStyle = {
+  filter: 'blur(5px)',
+  transition: '.5s ease-out',
+};
 
 class Landing extends React.Component {
   constructor(props) {
@@ -9,8 +15,10 @@ class Landing extends React.Component {
   }
 
   render() {
+    const { blur } = this.props;
+
     return (
-      <div>
+      <div style={blur ? blurStyle : {}}>
         <picture>
           <source media="(max-width: 415px)" srcSet={landingMobile} />
           <source media="(min-width: 416px)" srcSet={landingDesktop} />
@@ -24,5 +32,13 @@ class Landing extends React.Component {
     );
   }
 }
+
+Landing.propTypes = {
+  blur: PropTypes.bool,
+};
+
+Landing.defaultProps = {
+  blur: false,
+};
 
 export default Landing;

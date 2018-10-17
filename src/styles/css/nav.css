@@ -8,51 +8,19 @@
 .invisible-links-wrapper {
   display: inline-table; }
 
-.hamburger-box {
+.hamburger-container {
   display: none;
   height: 2rem;
   position: fixed;
   width: 2rem; }
-  .hamburger-box input[type=checkbox] {
-    display: none; }
-  .hamburger-box label {
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%; }
-  .hamburger-box .bun {
-    position: absolute;
-    height: .25rem;
-    width: 100%;
-    background-color: #fff;
-    transition: all .5s; }
-  .hamburger-box .diagonal.bun-top {
-    position: relative;
-    float: left; }
-  .hamburger-box .horizontal {
-    position: relative;
-    float: left;
-    margin-top: .5rem; }
-  .hamburger-box .diagonal.bun-bottom {
-    position: relative;
-    float: left;
-    margin-top: .5rem; }
-  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .horizontal {
-    opacity: 0; }
-  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-top {
-    transform: rotate(135deg);
-    margin-top: .75rem; }
-  .hamburger-box input[type=checkbox]:checked ~ .hamburger-spin > .diagonal.bun-bottom {
-    transform: rotate(-135deg);
-    margin-top: -1rem; }
 
 @media only screen and (max-width: 415px) {
   .nav-bar {
     align-items: center;
     bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     flex-wrap: wrap;
-    height: 3.5rem;
+    height: 3.25rem;
     justify-content: center;
     padding-bottom: 0;
     position: fixed;
@@ -62,9 +30,10 @@
     width: 3.5rem;
     z-index: 100; }
 
-  .hamburger-box {
+  .hamburger-container {
     display: inherit;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
 
   .invisible-links-wrapper {
     align-items: flex-end;
@@ -74,7 +43,7 @@
     height: 0;
     justify-content: flex-end;
     overflow: hidden;
-    padding-bottom: 2em;
+    padding-bottom: 2.5em;
     position: absolute;
     width: 0;
     transition: height .5s; }

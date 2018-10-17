@@ -1,3 +1,5 @@
+@import 'colors';
+
 .story-heading-container {
   align-items: center;
   display: flex;
@@ -9,9 +11,58 @@
   font-size: 41pt;
 }
 
+.story-subheading-container {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.whiskers {
+  height: 2em;
+  width: auto;
+  transform: rotate(-10deg);
+  animation: blink .8s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 100%; }
+  // 49% { opacity: 0; }
+  50% { opacity: 0; }
+  // 99% { opacity: 0; }
+  100% { opacity: 100%; }
+}
+
+.whiskers-left {
+  margin-top: 3.5em;
+}
+
+.whiskers-right {
+  margin-top: .75em;
+}
+
 .story-subheading {
   color: $berry;
   font-size: 33pt;
   padding-top: .5em;
   transform: rotate(-10deg);
+}
+
+.story-col {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  justify-content: flex-end;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.story-text {
+  font-size: 16pt;
+  margin: 0;
+  padding: 2em 3em 0 3em;
 }

@@ -1,6 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import rsvpMobile from '../../assets/rsvp-mobile.jpg';
 import rsvpDesktop from '../../assets/rsvp-desktop.jpg';
+
+const blurStyle = {
+  filter: 'blur(5px)',
+  transition: '.5s ease-out',
+};
 
 class RSVP extends React.Component {
   constructor(props) {
@@ -9,8 +15,10 @@ class RSVP extends React.Component {
   }
 
   render() {
+    const { blur } = this.props;
+
     return (
-      <div>
+      <div style={blur ? blurStyle : {}}>
         <picture>
           <source media="(max-width: 415px)" srcSet={rsvpMobile} />
           <source media="(min-width: 416px)" srcSet={rsvpDesktop} />
@@ -23,5 +31,13 @@ class RSVP extends React.Component {
     );
   }
 }
+
+RSVP.propTypes = {
+  blur: PropTypes.bool
+};
+
+RSVP.defaultProps = {
+  blur: false
+};
 
 export default RSVP;

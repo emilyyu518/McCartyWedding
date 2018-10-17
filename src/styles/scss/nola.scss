@@ -1,0 +1,28 @@
+@import 'colors';
+
+.nola-heading-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 7em 0 0 2em;
+}
+
+.nola-heading-color-box {
+  align-items: flex-end;
+  background-color: $wine-transparent;
+  display: flex;
+  padding: 1.5em;
+  max-width: 40vw;
+  min-height: 25vh;
+}
+
+.nola-heading {
+  font-size: 11vw;
+  line-height: 1em;
+}
+
+.nola-subheading {
+  font-size: 16vw;
+  margin-left: .25em;
+  margin-top: -.45em;
+}

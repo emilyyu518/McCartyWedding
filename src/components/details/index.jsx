@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import detailsMobile from '../../assets/details-mobile.jpg';
 import detailsDesktop from '../../assets/details-desktop.jpg';
+
+const blurStyle = {
+  filter: 'blur(5px)',
+  transition: '.5s ease-out',
+};
+
 class Details extends React.Component {
   constructor(props) {
     super(props);
@@ -8,8 +15,10 @@ class Details extends React.Component {
   }
 
   render() {
+    const { blur } = this.props;
+
     return (
-      <div>
+      <div style={blur ? blurStyle : {}}>
         <picture>
           <source media="(max-width: 415px)" srcSet={detailsMobile} />
           <source media="(min-width: 416px)" srcSet={detailsDesktop} />
@@ -27,5 +36,13 @@ class Details extends React.Component {
     );
   }
 }
+
+Details.propTypes = {
+  blur: PropTypes.bool
+};
+
+Details.defaultProps = {
+  blur: false
+};
 
 export default Details;

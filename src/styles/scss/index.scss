@@ -1,11 +1,17 @@
+@import 'colors';
 @import 'fonts';
+@import 'hamburger-config';
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 @import 'nav';
 @import 'landing';
 @import 'details';
 @import 'rsvp';
 @import 'story';
+@import 'nola';
 
-$wine: #2E011B;
+body {
+  margin: 0;
+}
 
 .center-contents {
   display: flex;
@@ -25,11 +31,4 @@ $wine: #2E011B;
     top: 0;
     z-index: -1;
   }
-}
-
-.story-col {
-  display: flex;
-  flex-direction: column;
-  height: 200vh;
-  justify-content: flex-end;
 }

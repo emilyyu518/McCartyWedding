@@ -9,47 +9,59 @@ import NOLA from './components/nola/index';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      blur: false,
+    }
+    this.toggleBlur = this.toggleBlur.bind(this);
+  }
+  toggleBlur() {
+    this.setState(state => ({ blur: !state.blur }), () => console.log('called!', this.state.blur));
+  }
   render() {
+    const { blur } = this.state;
+
     return (
       <Router>
         <Switch>
           <Route
             exact path="/"
             render={props => (
-              <Navigation>
-                <Landing {...props} />
+              <Navigation toggleBlur={this.toggleBlur}>
+                <Landing {...props} blur={blur} />
               </Navigation>
             )}
           />
           <Route
             path="/details"
             render={props => (
-              <Navigation>
-                <Details {...props} />
+              <Navigation toggleBlur={this.toggleBlur}>
+                <Details {...props} blur={blur} />
               </Navigation>
             )}
             />
           <Route
             path="/RSVP"
             render={props => (
-              <Navigation>
-                <RSVP {...props} />
+              <Navigation toggleBlur={this.toggleBlur}>
+                <RSVP {...props} blur={blur} />
               </Navigation>
             )}
             />
           <Route
             path="/our-story"
             render={props => (
-              <Navigation>
-                <Story {...props} />
+              <Navigation toggleBlur={this.toggleBlur}>
+                <Story {...props} blur={blur} />
               </Navigation>
             )}
             />
           <Route
             path="/NOLA"
             render={props => (
-              <Navigation>
-                <NOLA {...props} />
+              <Navigation toggleBlur={this.toggleBlur}>
+                <NOLA {...props} blur={blur} />
               </Navigation>
             )}
           />

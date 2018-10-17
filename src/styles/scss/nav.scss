@@ -1,5 +1,4 @@
-$berry: #4B012C;
-$wine: #2E011B;
+@import 'colors';
 
 .nav-bar {
   background-color: $berry;
@@ -13,72 +12,20 @@ $wine: #2E011B;
   display: inline-table;
 }
 
-.hamburger-box {
+.hamburger-container {
   display: none;
   height: 2rem;
   position: fixed;
   width: 2rem;
-
-  input[type=checkbox] {
-    display: none;
-  }
-
-  label {
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-  }
-
-  .bun {
-    position: absolute;
-    height: .25rem;
-    width: 100%;
-    background-color: #fff;
-    transition: all .5s;
-  }
-
-  .diagonal.bun-top {
-    position: relative;
-    float: left;
-  }
-
-  .horizontal {
-    position: relative;
-    float: left;
-    margin-top: .5rem;
-  }
-
-  .diagonal.bun-bottom {
-    position: relative;
-    float: left;
-    margin-top: .5rem;
-  }
-
-  input[type=checkbox]:checked~.hamburger-spin> {
-    .horizontal {
-      opacity: 0;
-    }
-
-    .diagonal.bun-top {
-      transform: rotate(135deg);
-      margin-top: .75rem;
-    }
-
-    .diagonal.bun-bottom {
-      transform: rotate(-135deg);
-      margin-top: -1rem;
-    }
-  }
 }
 
 @media only screen and (max-width: 415px) {
   .nav-bar {
     align-items: center;
     bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
     flex-wrap: wrap;
-    height: 3.5rem;
+    height: 3.25rem;
     justify-content: center;
     padding-bottom: 0;
     position: fixed;
@@ -89,9 +36,10 @@ $wine: #2E011B;
     z-index: 100;
   }
 
-  .hamburger-box {
+  .hamburger-container {
     display: inherit;
     position: relative;
+    z-index: 1;
   }
 
   .invisible-links-wrapper {
@@ -102,7 +50,7 @@ $wine: #2E011B;
     height: 0;
     justify-content: flex-end;
     overflow: hidden;
-    padding-bottom: 2em;
+    padding-bottom: 2.5em;
     position: absolute;
     width: 0;
     transition: height .5s;

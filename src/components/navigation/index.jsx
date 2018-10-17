@@ -1,19 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const active = {
-  fontWeight: 'bold',
+  fontWeight: '500',
 };
 
 const navStyle = {
   open: {
     alignItems: 'flex-end',
-    backdropFilter: 'blur(5px)',
+    // backdropFilter: 'blur(5px)',
     backgroundColor: 'rgba(45, 1, 27, .8)',
     boxSizing: 'border-box',
     height: '100vh',
     justifyContent: 'flex-end',
-    padding: '25px',
+    padding: '30px',
     bottom: '0',
     right: '0',
     width: '100vw',
@@ -38,7 +39,9 @@ class Navigation extends React.Component {
   }
 
   toggleNav() {
-    this.setState(state => ({ navOpen: !state.navOpen }));
+    const { toggleBlur } = this.props;
+
+    this.setState(state => ({ navOpen: !state.navOpen }), () => toggleBlur());
   }
 
   render () {
@@ -48,22 +51,13 @@ class Navigation extends React.Component {
     return (
       <div>
         <nav className="nav-bar" style={navOpen ? navStyle.open : navStyle.closed}>
-          {/* <div className="hamburger-container"> */}
-            <div className="hamburger-box">
-              <input
-                type="checkbox"
-                className="hamburger"
-                id="hamburger"
-                checked={navOpen}
-                onChange={this.toggleNav}
-              />
-              <label htmlFor="hamburger" className="hamburger-spin">
-                <div className="bun diagonal bun-top" />
-                <div className="bun horizontal" />
-                <div className="bun diagonal bun-bottom" />
-              </label>
-            </div>
-          {/* </div> */}
+          <div className="hamburger-container">
+            <button className={`hamburger hamburger--collapse ${navOpen ? 'is-active' : ''}`} type="button" onClick={this.toggleNav}>
+              <span className="hamburger-box">
+                <span className="hamburger-inner" />
+              </span>
+            </button>
+          </div>
           <div className="invisible-links-wrapper" style={navOpen ? navStyle.notInvisible : navStyle.invisible}>
             <NavLink
               to="/details"
@@ -119,5 +113,13 @@ class Navigation extends React.Component {
     );
   }
 }
+
+Navigation.propTypes = {
+  toggleBlur: PropTypes.func,
+};
+
+Navigation.defaultProps = {
+  toggleBlur: () => null,
+};
 
 export default Navigation;
