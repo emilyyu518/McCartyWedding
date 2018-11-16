@@ -17,29 +17,6 @@
   white-space: nowrap;
 }
 
-.whiskers {
-  height: 2em;
-  width: auto;
-  transform: rotate(-10deg);
-  animation: blink .8s infinite;
-}
-
-@keyframes blink {
-  0% { opacity: 100%; }
-  // 49% { opacity: 0; }
-  50% { opacity: 0; }
-  // 99% { opacity: 0; }
-  100% { opacity: 100%; }
-}
-
-.whiskers-left {
-  margin-top: 3.5em;
-}
-
-.whiskers-right {
-  margin-top: .75em;
-}
-
 .story-subheading {
   color: $berry;
   font-size: 33pt;

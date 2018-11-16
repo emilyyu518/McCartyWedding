@@ -77,14 +77,14 @@ class Navigation extends React.Component {
               PARTY WITH US
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               to="/our-story"
               activeStyle={active}
               className="nav-link"
               onClick={this.toggleNav}
               >
               OUR STORY
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/NOLA"
